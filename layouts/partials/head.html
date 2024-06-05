@@ -43,6 +43,12 @@
     {{ else }}
     <meta property="twitter:card" content="summary" />
     {{ end }}
+
+    {{ if .Params.author }}
+    <meta name="author" content="{{ .Params.author }}">
+    {{ else }}
+    <meta name="author" content="{{ .Site.Params.author }}">
+    {{ end }}
     <!-- end ogp -->
 
     <meta name="keyword"  content="{{ .Site.Params.keyword }}">
